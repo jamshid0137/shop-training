@@ -1,0 +1,32 @@
+#version: '3.8'
+#
+#services:
+#  postgres:
+#    image: postgres:15
+#    container_name: shop-postgres
+#    environment:
+#      POSTGRES_USER: shopuser
+#      POSTGRES_PASSWORD: shoppass
+#      POSTGRES_DB: shopdb
+#    ports:
+#      - "5432:5432"
+#    volumes:
+#      - postgres_data:/var/lib/postgresql/data
+#    restart: always
+#
+#  shopproject-app:
+#    build: .
+#    container_name: shopproject-app
+#    ports:
+#      - "8080:8080"
+#    depends_on:
+#      - postgres
+#    environment:
+#      SPRING_DATASOURCE_URL: jdbc:postgresql://shop-postgres:5432/shopdb
+#      SPRING_DATASOURCE_USERNAME: shopuser
+#      SPRING_DATASOURCE_PASSWORD: shoppass
+#      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+#      SPRING_PROFILES_ACTIVE: docker
+#
+#volumes:
+#  postgres_data:
