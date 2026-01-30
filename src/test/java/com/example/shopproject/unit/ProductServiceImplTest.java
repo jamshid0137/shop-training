@@ -1,4 +1,4 @@
-package com.example.shopproject;
+package com.example.shopproject.unit;
 
 
 import com.example.shopproject.dto.*;
